@@ -1,0 +1,69 @@
+{
+  "databases": [
+    {
+      "collections": [
+        {
+          "name": "orders",
+          "dataSources": [
+            {
+              "collection": "orders",
+              "database": "test",
+              "storeName": "m10vdj"
+            },
+            {
+              "path": "/*",
+              "storeName": "ps-ilt-atlas-datalake"
+            }
+          ]
+        }
+      ],
+      "name": "test",
+      "views": []
+    },
+    {
+      "collections": [
+        {
+          "name": "listings",
+          "dataSources": [
+            {
+              "collection": "listings",
+              "database": "sample_airbnb",
+              "storeName": "dataStore0"
+            },
+            {
+              "path": "/*",
+              "storeName": "ps-ilt-atlas-datalake"
+            }
+          ]
+        }
+      ],
+      "name": "airbnb",
+      "views": []
+    }
+  ],
+  "stores": [
+    {
+      "clusterName": "m10vdj",
+      "name": "m10vdj",
+      "projectId": "6720e841e78088125e61c25d",
+      "provider": "atlas"
+    },
+    {
+      "bucket": "ps-ilt-atlas-datalake",
+      "delimiter": "/",
+      "name": "ps-ilt-atlas-datalake",
+      "prefix": "12nov24vdj_3daac9379fa178d234c39e6a6dfc0117",
+      "provider": "s3",
+      "region": "eu-west-1"
+    },
+    {
+      "clusterName": "m10vdj",
+      "name": "dataStore0",
+      "projectId": "6720e841e78088125e61c25d",
+      "provider": "atlas",
+      "readPreference": {
+        "mode": "secondary"
+      }
+    }
+  ]
+}
