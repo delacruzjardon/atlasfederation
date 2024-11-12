@@ -29,8 +29,8 @@ Copy configurationatlasfederation.json to your own Atlas Data Federation configu
 
 
 # Step 3 
-Change the values from archive_final.py with your own information ( client, prefix and initials) and save
+Change the values from archive_final.py and archive_final_2.py with your own information ( client, prefix and initials) and save
 
 # Step 4 
-Run archive_final.py  ( python3 archive_final.py )
+Run archive_final.py  ( python3 archive_final.py ) and archive_final_2.py
 
