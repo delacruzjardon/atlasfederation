@@ -11,7 +11,7 @@ Check that the Federated Database Instance is 'eu-west-1'
 # Step 1
 
 Create the view
-
+```
 use sample_airbnb
 db.runCommand({ 
     "create" : "listings", 
@@ -21,7 +21,8 @@ db.runCommand({
     { $match: { reviewCount: { $gt: 10 } } },
     { $project: { name: 1, reviewCount: 1, latestReviews: { $slice: [ "$reviews", -10 ] } } }
     ] 
-})`
+})
+```
 
 # Step 2 
 Copy configurationatlasfederation.json to your own Atlas Data Federation configuration and save
